@@ -4,4 +4,4 @@
 #define SOC_LOWER_LIMIT 20
 #define SOC_UPPER_LIMIT 80
 #define CHARGERATE_UPPER_LIMIT 0.8
-int batteryIsOk(float temperature, float soc, float chargeRate)
+int batteryIsOk(float temperature, float soc, float chargeRate);
