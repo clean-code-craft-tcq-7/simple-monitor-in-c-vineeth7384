@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include"BMS_Config.h"
 
-int LookupTableWarningIndex = 0;
+int ErrorMessageLookupTableIndex = 0;
 int TempUnit= 0;
 /************************************************************************
  *FUNCTION:
@@ -10,14 +10,14 @@ int TempUnit= 0;
  *RETURNVALUE:
 ************************************************************************/
 
-const Warning WarningLookupTable[] =
+const ErrorMessage ErrorMessageLookupTable[] =
 {
     {"ENGLISH","Temperature out of range!\n","Charge Rate out of range!\n","State of Charge out of range!\n"},
     {"GERMAN","Temperatur außerhalb des Bereichs!\n","Laderate außerhalb des Bereichs!\n","Ladezustand außerhalb des Bereichs!\n"},
 
 };
 
-int MaximumLanguageCount = (sizeof(WarningLookupTable)/sizeof(WarningLookupTable[0]));
+int MaximumLanguageCount = (sizeof(ErrorMessageLookupTable)/sizeof(ErrorMessageLookupTable[0]));
 
 /************************************************************************
  *FUNCTION:    CheckSelectedLanguage
@@ -27,9 +27,9 @@ int MaximumLanguageCount = (sizeof(WarningLookupTable)/sizeof(WarningLookupTable
 ************************************************************************/
 void CheckSelectedLanguage(void)
 {
-  if(LookupTableWarningIndex >= MaximumLanguageCount)
+  if(ErrorMessageLookupTableIndex >= MaximumLanguageCount)
   {
-     LookupTableWarningIndex =0 ;
+     ErrorMessageLookupTableIndex =0 ;
      printf("Selecetd Langauage is not available! switch to default language English\n" );
   }
 }
