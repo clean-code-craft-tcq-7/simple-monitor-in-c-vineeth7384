@@ -13,7 +13,7 @@ int IsChargeRateInRange(float chargeRate)
   int returnstatus =1;
   if(chargeRate > CHARGERATE_UPPER_LIMIT)
   {
-    printf("%s",WarningLookupTable[LookupTableWarningIndex].ChargeRateWarning);
+    printf("%s",ErrorMessageLookupTable[ErrorMessageLookupTableIndex].ChargeRateWarning);
     returnstatus = 0;
   }
   return returnstatus;
