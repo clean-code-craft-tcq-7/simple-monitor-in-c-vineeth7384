@@ -13,7 +13,7 @@ int IsSocInRange(float soc )
   int returnstatus =1;
   if(soc < SOC_LOWER_LIMIT || soc > SOC_UPPER_LIMIT)
   {
-    printf("%s",WarningLookupTable[LookupTableWarningIndex].SoCWarning);
+    printf("%s",ErrorMessageLookupTable[ErrorMessageLookupTableIndex].SoCWarning);
     returnstatus = 0;
   }
   return returnstatus;
