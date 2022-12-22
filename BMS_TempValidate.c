@@ -16,7 +16,7 @@ int IsTempInRange(float temperature)
   
   if(temperature < TEMP_LOWER_LIMIT|| temperature > TEMP_UPPER_LIMIT )
   {
-    printf("%s",WarningLookupTable[LookupTableWarningIndex].TempWarning);
+    printf("%s",ErrorMessageLookupTable[ErrorMessageLookupTableIndex].TempWarning);
     returnstatus = 0;
   }
   return returnstatus;
