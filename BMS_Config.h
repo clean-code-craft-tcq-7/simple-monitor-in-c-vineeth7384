@@ -15,10 +15,10 @@ typedef struct
   char*TempWarning;
   char*ChargeRateWarning;
   char*SoCWarning;
-}Warning;
+}ErrorMessage;
 
-extern const Warning WarningLookupTable[];
+extern const ErrorMessage ErrorMessageLookupTable[];
 void CheckSelectedLanguage(void);
-extern int LookupTableWarningIndex;
+extern int ErrorMessageLookupTableIndex;
 extern int TempUnit;
 #endif
